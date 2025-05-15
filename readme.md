@@ -1,0 +1,9 @@
+install all packages
+
+1. node modules
+2. express
+3. mogoose
+4. dotenv
+5. nodemon
+
+# We use module import
