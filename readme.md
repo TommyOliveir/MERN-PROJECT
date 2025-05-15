@@ -7,3 +7,5 @@ install all packages
 5. nodemon
 
 # We use module import
+
+install express types for typscript
