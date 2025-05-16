@@ -15,3 +15,9 @@ install express types for typscript
 npx eslint --init
 npm init -y
 npx tsc --init
+
+# file to add
+
+eslint
+.gitignore from node.gitignore
+tsconfig
