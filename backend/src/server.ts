@@ -1,15 +1,6 @@
-import express from "express";
-import dotenv from "dotenv";
+import app from "./app";
 import mongoose from "mongoose";
-import env from "./util/validateEnv";
-
-dotenv.config();
-
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("Server is ready");
-});
+import { env } from "./util/validateEnv";
 
 console.log(env.MONGO_URI);
 

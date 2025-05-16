@@ -13,8 +13,8 @@ export default defineConfig([
   },
   {
     files: ["**/*.{js,mjs,cjs,ts}"],
-    plugins: { js },
-    extends: ["js/recommended"],
+    plugins: { js, "@typescript-eslint": tseslint },
+    extends: ["js/recommended", "plugin:@typescript-eslint/recommended"],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts}"],
