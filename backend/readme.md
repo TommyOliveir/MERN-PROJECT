@@ -5,6 +5,7 @@ install all packages
 3. mogoose
 4. dotenv
 5. nodemon
+6. envalid
 
 # We use module import
 

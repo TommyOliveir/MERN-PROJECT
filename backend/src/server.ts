@@ -1,5 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
+import env from "./util/validateEnv";
 
 dotenv.config();
 
@@ -9,10 +11,16 @@ app.get("/", (req, res) => {
   res.send("Server is ready");
 });
 
-console.log(process.env.MONGO_URI);
+console.log(env.MONGO_URI);
 
-app.listen(5000, () => {
-  console.log("Server started at http://localhost:5000");
-});
+const port = env.PORT;
 
-// m4rYW8n5B0se62rO
+mongoose
+  .connect(env.MONGO_URI)
+  .then(() => {
+    console.log(`MongoDB Connected`);
+    app.listen(port, () => {
+      console.log(`Server started at http://localhost:${port}`);
+    });
+  })
+  .catch(console.error);
